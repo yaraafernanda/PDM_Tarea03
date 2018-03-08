@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.iteso.pdm_scrollabletabs.beans.ItemProduct;
 
@@ -41,6 +40,7 @@ public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.ViewHold
         public ImageView mProductImage;
         public ImageView mProductThumbnail;
         public RelativeLayout mEventLayout;
+
         public ViewHolder(View v) {
             super(v);
             mEventLayout = (RelativeLayout) v.findViewById(R.id.item_product_layout);
@@ -54,6 +54,7 @@ public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.ViewHold
             mProductThumbnail = (ImageView) v.findViewById(R.id.item_product_thumbnail);
         }
     }
+
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
@@ -96,24 +97,20 @@ public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.ViewHold
             }
         });
 
-        holder.mDetail.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(v.getContext(),products.get(position).toString(),Toast.LENGTH_LONG).show();
-            }
-        });
-
-        holder.mShare.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(v.getContext(),products.get(position).toString(),Toast.LENGTH_LONG).show();
-            }
-        });
-
         holder.mEventLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(v.getContext(),products.get(position).toString(),Toast.LENGTH_LONG).show();
+                ItemProduct item = new ItemProduct();
+                item.setTitle(products.get(position).getTitle());
+                item.setStore(products.get(position).getStore());
+                item.setLocation(products.get(position).getLocation());
+                item.setPhone(products.get(position).getPhone());
+                item.setCode(products.get(position).getCode());
+                item.setImage(products.get(position).getImage());
+
+                Intent intent = new Intent(context, ActivityProduct.class);
+                intent.putExtra("ITEM", item);
+                ((ActivityMain) context).startActivityForResult(intent, products.get(position).getCode());
             }
         });
     }

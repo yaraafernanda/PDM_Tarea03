@@ -34,7 +34,7 @@ public class FragmentElectronics extends Fragment {
         recyclerView.setLayoutManager(mLayoutManager);
 
         ArrayList<ItemProduct> myDataSet = new ArrayList<ItemProduct>();
-        myDataSet.add(new ItemProduct("iPhone 8 Plus", "BestBuy", "Zapopan","3338466316","Toma las mejores fotos con este celular", 4));
+        myDataSet.add(new ItemProduct("iPhone 8 Plus", "BestBuy", "Zapopan","3338466316","Toma las mejores fotos con este celular", 4, 4));
 
         mAdapter = new AdapterProduct(getActivity(), myDataSet);
         recyclerView.setAdapter(mAdapter);

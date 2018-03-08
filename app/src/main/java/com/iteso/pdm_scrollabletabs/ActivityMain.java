@@ -1,5 +1,7 @@
 package com.iteso.pdm_scrollabletabs;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -21,6 +23,8 @@ import com.iteso.pdm_scrollabletabs.beans.ItemProduct;
 import java.util.ArrayList;
 
 public class ActivityMain extends AppCompatActivity {
+
+    FragmentTechnology fragmentTechnology;
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -110,7 +114,6 @@ public class ActivityMain extends AppCompatActivity {
             View rootView = inflater.inflate(R.layout.fragment_activity_main, container, false);
             RecyclerView recyclerView = rootView.findViewById(R.id.fragmentRecyclerView);
 
-            recyclerView.setHasFixedSize(true);
             LinearLayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
             recyclerView.setLayoutManager(mLayoutManager);
 
@@ -136,7 +139,10 @@ public class ActivityMain extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return new FragmentTechnology();
+                   if(fragmentTechnology == null){
+                        fragmentTechnology = new FragmentTechnology();
+                    }
+                    return fragmentTechnology;
                 case 1:
                     return new FragmentHome();
                 case 2:
@@ -160,6 +166,15 @@ public class ActivityMain extends AppCompatActivity {
                 case 2 : return "Electronics";
             }
             return null;
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode == 0 || requestCode == 1 || requestCode == 2){
+            if(resultCode == Activity.RESULT_OK){
+                fragmentTechnology.onActivityResult(requestCode, resultCode, data);
+            }
         }
     }
 }

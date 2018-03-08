@@ -34,7 +34,7 @@ public class FragmentHome extends Fragment {
         recyclerView.setLayoutManager(mLayoutManager);
 
         ArrayList<ItemProduct> myDataSet = new ArrayList<ItemProduct>();
-        myDataSet.add(new ItemProduct("Sala Sabel", "Plascencia", "Zapopan","3338466316","Llevate esta sala ideal para tu familia", 3));
+        myDataSet.add(new ItemProduct("Sala Sabel", "Plascencia", "Zapopan","3338466316","Llevate esta sala ideal para tu familia", 3, 3));
 
         mAdapter = new AdapterProduct(getActivity(), myDataSet);
         recyclerView.setAdapter(mAdapter);

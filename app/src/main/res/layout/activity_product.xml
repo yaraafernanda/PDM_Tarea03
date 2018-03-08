@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.iteso.pdm_scrollabletabs.ActivityProduct">
+
+    <ImageView
+        android:id="@+id/activity_product_image"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerInside"
+        android:src="@drawable/mac"/>
+
+    <EditText
+        android:id="@+id/activity_product_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Introduce title..."
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/activity_product_store"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Introduce store..."
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/activity_product_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Introduce location..."
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/activity_product_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Introduce phone..."
+        android:inputType="phone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="end">
+
+        <Button
+            android:id="@+id/activity_product_save"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="SAVE"
+            android:layout_gravity="bottom"/>
+
+        <Button
+            android:id="@+id/activity_product_cancel"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="CANCEL"
+            android:layout_gravity="bottom"/>
+
+    </LinearLayout>
+
+</LinearLayout>
