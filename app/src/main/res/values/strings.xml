@@ -6,4 +6,39 @@
     <string name="tech">Technology</string>
     <string name="home">Home</string>
     <string name="elect">Electronics</string>
+
+    <string name="login">Log In</string>
+    <string name="in_user">Introduce user</string>
+    <string name="in_pwd">Introduce password</string>
+
+    <string name="in_title">Introduce title...</string>
+    <string name="in_store">Introduce store...</string>
+    <string name="in_loc">Introduce location...</string>
+    <string name="in_phone">Introduce phone...</string>
+
+    <string name="save">SAVE</string>
+    <string name="cancel">CANCEL</string>
+    <string name="share">SHARE</string>
+    <string name="seemore">SEE MORE</string>
+
+    <string name="welcome">Welcome to ITESO Products</string>
+
+    <string name="product1">Mac</string>
+    <string name="store1">BestBuy</string>
+    <string name="location1">Zapopan</string>
+    <string name="phone1">3338466316</string>
+    <string name="desc1">Llevate esta Mac con un 30% de descuento para que puedas programar para XCode y Android sin tener que batallar tanto como en tu Windows</string>
+
+    <string name="product2">Alienware</string>
+    <string name="store2">BestBuy</string>
+    <string name="location2">Guadalajara</string>
+    <string name="phone2">3311960785</string>
+    <string name="desc2">Llevate esta Alienware para que puedas programar viedojuegos increíbles</string>
+
+    <string name="product3">Lanix</string>
+    <string name="store3">BestBuy</string>
+    <string name="location3">Tlaquepaque</string>
+    <string name="phone3">3352486325</string>
+    <string name="desc3">Llevate esta Lanix perfecta para tus tareas escolares</string>
+
 </resources>

@@ -38,9 +38,21 @@ public class FragmentTechnology extends Fragment {
         recyclerView.setLayoutManager(mLayoutManager);
 
         myDataSet = new ArrayList<ItemProduct>();
-        myDataSet.add(new ItemProduct("Mac", "BestBuy", "Zapopan","3338466316","Llevate esta Mac con un 30% de descuento para que puedas programar para XCode y Android sin tener que batallar tanto como en tu Windows", 0, 0));
-        myDataSet.add(new ItemProduct("Alienware", "BestBuy", "Guadalajara","3311960785","Llevate esta Alienware para que puedas programar viedojuegos increíbles", 1, 1));
-        myDataSet.add(new ItemProduct("Lanix", "BestBuy", "Tlaquepaque","3352486325","Llevate esta Lanix perfecta para tus tareas escolares", 2, 2));
+        myDataSet.add(new ItemProduct(getResources().getString(R.string.product1),
+                getResources().getString(R.string.store1),
+                getResources().getString(R.string.location1),
+                getResources().getString(R.string.phone1),
+                getResources().getString(R.string.desc1),0, 0));
+        myDataSet.add(new ItemProduct(getResources().getString(R.string.product2),
+                getResources().getString(R.string.store2),
+                getResources().getString(R.string.location2),
+                getResources().getString(R.string.phone2),
+                getResources().getString(R.string.desc2),1, 1));
+        myDataSet.add(new ItemProduct(getResources().getString(R.string.product3),
+                getResources().getString(R.string.store3),
+                getResources().getString(R.string.location3),
+                getResources().getString(R.string.phone3),
+                getResources().getString(R.string.desc3),2, 2));
 
         mAdapter = new AdapterProduct(getActivity(), myDataSet);
         recyclerView.setAdapter(mAdapter);

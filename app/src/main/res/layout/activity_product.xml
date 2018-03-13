@@ -23,7 +23,7 @@
             android:id="@+id/activity_product_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Introduce title..."
+            android:hint="@string/in_title"
             android:inputType="text"/>
     </android.support.design.widget.TextInputLayout>
 
@@ -34,7 +34,7 @@
             android:id="@+id/activity_product_store"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Introduce store..."
+            android:hint="@string/in_store"
             android:inputType="text"/>
     </android.support.design.widget.TextInputLayout>
 
@@ -45,7 +45,7 @@
             android:id="@+id/activity_product_location"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Introduce location..."
+            android:hint="@string/in_loc"
             android:inputType="text"/>
     </android.support.design.widget.TextInputLayout>
 
@@ -56,7 +56,7 @@
             android:id="@+id/activity_product_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Introduce phone..."
+            android:hint="@string/in_phone"
             android:inputType="phone"/>
     </android.support.design.widget.TextInputLayout>
 
@@ -71,7 +71,7 @@
             android:layout_width="wrap_content"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="SAVE"
+            android:text="@string/save"
             android:layout_gravity="bottom"/>
 
         <Button
@@ -79,7 +79,7 @@
             android:layout_width="wrap_content"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="CANCEL"
+            android:text="@string/cancel"
             android:layout_gravity="bottom"/>
 
     </LinearLayout>

@@ -4,4 +4,13 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="appbar_padding_top">8dp</dimen>
+
+    <dimen name="app_padding">15dp</dimen>
+    <dimen name="text">30sp</dimen>
+    <dimen name="textView">20sp</dimen>
+    <dimen name="splash_padding">20dp</dimen>
+    <dimen name="splash_margin">23dp</dimen>
+
+    <dimen name="itemproduct_margin">5dp</dimen>
+    <dimen name="button">3dp</dimen>
 </resources>

@@ -2,6 +2,7 @@ package com.iteso.pdm_scrollabletabs;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -76,8 +77,25 @@ public class ActivityMain extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if(id == R.id.action_policy){
+            Intent intent = new Intent(ActivityMain.this,
+                    ActivityPrivacyPolicy.class);
+            startActivity(intent);
+        }
+
+        if (id == R.id.action_logout) {
+            SharedPreferences sharedPreferences = getSharedPreferences(
+                    "com.iteso.USER_PREFERENCES", MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.clear();
+            editor.apply();
+
+            Intent intent = new Intent(ActivityMain.this,
+                    ActivityLogin.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP
+                    | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            finish();
         }
 
         return super.onOptionsItemSelected(item);
