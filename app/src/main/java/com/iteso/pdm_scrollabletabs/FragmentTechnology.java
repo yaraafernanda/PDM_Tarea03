@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.iteso.pdm_scrollabletabs.beans.ItemProduct;
+import com.iteso.pdm_scrollabletabs.database.DataBaseHandler;
+import com.iteso.pdm_scrollabletabs.database.ItemProductControl;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -38,7 +40,7 @@ public class FragmentTechnology extends Fragment {
         recyclerView.setLayoutManager(mLayoutManager);
 
         myDataSet = new ArrayList<ItemProduct>();
-        myDataSet.add(new ItemProduct(getResources().getString(R.string.product1),
+        /*myDataSet.add(new ItemProduct(getResources().getString(R.string.product1),
                 getResources().getString(R.string.store1),
                 getResources().getString(R.string.location1),
                 getResources().getString(R.string.phone1),
@@ -53,6 +55,11 @@ public class FragmentTechnology extends Fragment {
                 getResources().getString(R.string.location3),
                 getResources().getString(R.string.phone3),
                 getResources().getString(R.string.desc3),2, 2));
+        */
+
+        ItemProductControl itemProductControl = new ItemProductControl();
+        myDataSet = itemProductControl.getItemProductsByCategory(
+                0, DataBaseHandler.getInstance(getActivity()));
 
         mAdapter = new AdapterProduct(getActivity(), myDataSet);
         recyclerView.setAdapter(mAdapter);

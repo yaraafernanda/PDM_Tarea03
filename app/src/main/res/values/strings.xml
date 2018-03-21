@@ -41,4 +41,13 @@
     <string name="phone3">3352486325</string>
     <string name="desc3">Llevate esta Lanix perfecta para tus tareas escolares</string>
 
+    <string-array name="drawables">
+        <item>alienware</item>
+        <item>bestbuy</item>
+        <item>iphone</item>
+        <item>lanix</item>
+        <item>mac</item>
+        <item>sala</item>
+    </string-array>
+    
 </resources>

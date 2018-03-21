@@ -5,7 +5,10 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.iteso.pdm_scrollabletabs.beans.Store;
 import com.iteso.pdm_scrollabletabs.beans.User;
+import com.iteso.pdm_scrollabletabs.database.DataBaseHandler;
+import com.iteso.pdm_scrollabletabs.database.StoreControl;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -33,6 +36,18 @@ public class ActivitySplash extends AppCompatActivity {
         };
         Timer timer = new Timer();
         timer.schedule(task, 2000);
+
+        DataBaseHandler dh = DataBaseHandler.getInstance(ActivitySplash.this);
+        Store store1 = new Store();
+        Store store2 = new Store();
+        Store store3 = new Store();
+        StoreControl storeControl = new StoreControl();
+        storeControl.getStores(dh);
+        if(storeControl.getStores(dh).isEmpty()){
+            storeControl.addStore(store1, dh);
+            storeControl.addStore(store2, dh);
+            storeControl.addStore(store3, dh);
+        }
     }
 
     public User loadPreferences(){
