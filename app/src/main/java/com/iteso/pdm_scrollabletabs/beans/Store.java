@@ -17,7 +17,7 @@ public class Store implements Parcelable{
     private double longitude;
     private City city;
 
-    protected Store() {
+    public Store() {
         this.id = 0;
         this.name = "";
         this.phone = "";
@@ -121,14 +121,6 @@ public class Store implements Parcelable{
 
     @Override
     public String toString() {
-        return "Store{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", phone='" + phone + '\'' +
-                ", thumbnail=" + thumbnail +
-                ", latitude=" + latitude +
-                ", longitude=" + longitude +
-                ", city=" + city +
-                '}';
+        return name;
     }
 }

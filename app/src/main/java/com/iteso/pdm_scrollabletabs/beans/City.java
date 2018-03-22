@@ -12,6 +12,11 @@ public class City implements Parcelable{
     private int id;
     private String name;
 
+    public City(){
+        id = 0;
+        name = "";
+    }
+
     protected City(Parcel in) {
         id = in.readInt();
         name = in.readString();

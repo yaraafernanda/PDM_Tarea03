@@ -81,6 +81,11 @@ public class DataBaseHandler extends SQLiteOpenHelper {
                 + KEY_PRODUCT_IMAGE + " INTEGER,"
                 + KEY_PRODUCT_CATEGORY + " INTEGER)";
         db.execSQL(CREATE_PRODUCT_TABLE);
+        String CREATE_STOREPRODUCT_TABLE = "CREATE TABLE " + TABLE_STOREPRODUCT + "("
+                + KEY_SPRODUCT_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+                + KEY_SPRODUCT_IDP + " INTEGER,"
+                + KEY_SPRODUCT_IDS + " INTEGER)";
+        db.execSQL(CREATE_STOREPRODUCT_TABLE);
         db.execSQL("INSERT INTO " + TABLE_CATEGORY + " (" + KEY_CATEGORY_NAME + ") VALUES ('TECHNOLOGY')");
         db.execSQL("INSERT INTO " + TABLE_CATEGORY + " (" + KEY_CATEGORY_NAME + ") VALUES ('HOME')");
         db.execSQL("INSERT INTO " + TABLE_CATEGORY + " (" + KEY_CATEGORY_NAME + ") VALUES ('ELECTRONICS')");
@@ -92,11 +97,11 @@ public class DataBaseHandler extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO " + TABLE_CITY + " (" + KEY_CITY_ID + "," + KEY_CITY_NAME + ") VALUES (6, 'Tlajomulco')");
         db.execSQL("INSERT INTO " + TABLE_CITY + " (" + KEY_CITY_ID + "," + KEY_CITY_NAME + ") VALUES (7, 'Tonalá')");
         db.execSQL("INSERT INTO " + TABLE_CITY + " (" + KEY_CITY_ID + "," + KEY_CITY_NAME + ") VALUES (8, 'Zapopan')");
-        db.execSQL("INSERT INTO " + TABLE_STORE
+        /*db.execSQL("INSERT INTO " + TABLE_STORE
                 + " (" + KEY_STORE_NAME + "," + KEY_STORE_PHONE + ","
                 + KEY_STORE_CITY + "," + KEY_STORE_THUMBNAIL + ","
                 + KEY_STORE_LAT + "," + KEY_STORE_LNG
-                + ") VALUES ('BESTBUY', '01 800 237 8289', 2, 0, 20.6489713, -103.4207757)");
+                + ") VALUES ('BESTBUY', '01 800 237 8289', 2, 0, 20.6489713, -103.4207757)");*/
     }
 
     @Override

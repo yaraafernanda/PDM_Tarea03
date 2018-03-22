@@ -16,6 +16,15 @@ public class ItemProduct implements Parcelable{
     private Store store;
     private Category category;
 
+    public ItemProduct(){
+        code = 0;
+        title = null;
+        description = null;
+        image = 0;
+        store = null;
+        category = null;
+    }
+
     protected ItemProduct(Parcel in) {
         code = in.readInt();
         title = in.readString();

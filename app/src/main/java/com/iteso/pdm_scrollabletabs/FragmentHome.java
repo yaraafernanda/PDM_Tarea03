@@ -41,9 +41,9 @@ public class FragmentHome extends Fragment {
 
         ItemProductControl itemProductControl = new ItemProductControl();
         myDataSet = itemProductControl.getItemProductsByCategory(
-                1, DataBaseHandler.getInstance(getActivity()));
+                2, DataBaseHandler.getInstance(getContext()));
 
-        mAdapter = new AdapterProduct(getActivity(), myDataSet);
+        mAdapter = new AdapterProduct(this.getContext(), myDataSet);
         recyclerView.setAdapter(mAdapter);
         return view;
     }

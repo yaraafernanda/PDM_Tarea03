@@ -59,10 +59,11 @@ public class FragmentTechnology extends Fragment {
 
         ItemProductControl itemProductControl = new ItemProductControl();
         myDataSet = itemProductControl.getItemProductsByCategory(
-                0, DataBaseHandler.getInstance(getActivity()));
+                1, DataBaseHandler.getInstance(getContext()));
 
-        mAdapter = new AdapterProduct(getActivity(), myDataSet);
+        mAdapter = new AdapterProduct(getContext(), myDataSet);
         recyclerView.setAdapter(mAdapter);
+        itemProductControl = null;
         return view;
     }
 

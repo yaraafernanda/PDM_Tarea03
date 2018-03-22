@@ -66,9 +66,9 @@ public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.ViewHold
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
         holder.mProductTitle.setText(products.get(position).getTitle());
-        holder.mProductStore.setText(products.get(position).getStore());
-        holder.mProductLocation.setText(products.get(position).getLocation());
-        holder.mProductPhone.setText(products.get(position).getPhone());
+        holder.mProductStore.setText(products.get(position).getStore().getName());
+        holder.mProductLocation.setText(products.get(position).getStore().getCity().getName());
+        holder.mProductPhone.setText(products.get(position).getStore().getPhone());
 
         switch (products.get(position).getImage()) {
             case 0:
@@ -92,7 +92,7 @@ public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.ViewHold
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_DIAL,
-                        Uri.parse("tel:" + products.get(position).getPhone()));
+                        Uri.parse("tel:" + products.get(position).getStore().getPhone()));
                 context.startActivity(intent);
             }
         });
@@ -103,8 +103,7 @@ public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.ViewHold
                 ItemProduct item = new ItemProduct();
                 item.setTitle(products.get(position).getTitle());
                 item.setStore(products.get(position).getStore());
-                item.setLocation(products.get(position).getLocation());
-                item.setPhone(products.get(position).getPhone());
+                item.setCategory(products.get(position).getCategory());
                 item.setCode(products.get(position).getCode());
                 item.setImage(products.get(position).getImage());
 

@@ -41,9 +41,9 @@ public class FragmentElectronics extends Fragment {
 
         ItemProductControl itemProductControl = new ItemProductControl();
         myDataSet = itemProductControl.getItemProductsByCategory(
-                2, DataBaseHandler.getInstance(getActivity()));
+                3, DataBaseHandler.getInstance(getContext()));
 
-        mAdapter = new AdapterProduct(getActivity(), myDataSet);
+        mAdapter = new AdapterProduct(this.getContext(), myDataSet);
         recyclerView.setAdapter(mAdapter);
         return view;
     }

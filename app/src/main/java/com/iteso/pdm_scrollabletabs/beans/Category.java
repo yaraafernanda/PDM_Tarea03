@@ -12,6 +12,11 @@ public class Category implements Parcelable {
     private int id;
     private String name;
 
+    public Category(){
+        id = 0;
+        name = "";
+    }
+
     protected Category(Parcel in) {
         id = in.readInt();
         name = in.readString();
@@ -58,9 +63,6 @@ public class Category implements Parcelable {
 
     @Override
     public String toString() {
-        return "Category{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
+        return name;
     }
 }

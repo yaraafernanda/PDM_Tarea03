@@ -31,12 +31,12 @@ public class ActivityProduct extends AppCompatActivity {
         save = findViewById(R.id.activity_product_save);
         cancel = findViewById(R.id.activity_product_cancel);
 
-        if (getIntent().getExtras() != null){
+        /*if (getIntent().getExtras() != null){
             itemProduct = getIntent().getParcelableExtra("ITEM");
             if(itemProduct != null){
                 title.setText(itemProduct.getTitle());
-                store.setText(itemProduct.getStore());
-                location.setText(itemProduct.getLocation());
+            store.setText(itemProduct.getStore());
+                    location.setText(itemProduct.getLocation());
                 phone.setText(itemProduct.getPhone());
                 switch(itemProduct.getImage()){
                     case 0:
@@ -47,15 +47,15 @@ public class ActivityProduct extends AppCompatActivity {
                         image.setImageResource(R.drawable.mac); break;
                 }
             }
-        }
+        }*/
 
         save.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 item = new ItemProduct();
                 item.setTitle(title.getText().toString());
-                item.setStore(store.getText().toString());
-                item.setLocation(location.getText().toString());
-                item.setPhone(phone.getText().toString());
+                //item.setStore(store.getText().toString());
+                //item.setLocation(location.getText().toString());
+                //item.setPhone(phone.getText().toString());
                 item.setImage(itemProduct.getImage());
                 item.setCode(itemProduct.getCode());
 

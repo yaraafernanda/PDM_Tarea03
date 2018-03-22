@@ -9,25 +9,30 @@
     tools:context="com.iteso.pdm_scrollabletabs.ActivityItem">
 
     <Spinner
+        android:id="@+id/activity_item_image"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:entries="@array/drawables">
     </Spinner>
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <EditText
+            android:id="@+id/activity_item_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/in_title"/>
+            android:hint="@string/in_title"/>
     </android.support.design.widget.TextInputLayout>
 
     <Spinner
+        android:id="@+id/activity_item_category"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </Spinner>
 
     <Spinner
+        android:id="@+id/activity_item_store"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </Spinner>
@@ -38,6 +43,7 @@
         android:orientation="horizontal"
         android:layout_gravity="end">
         <Button
+            android:id="@+id/activity_item_save"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"

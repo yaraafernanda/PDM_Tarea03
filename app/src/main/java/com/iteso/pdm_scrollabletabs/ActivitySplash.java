@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.iteso.pdm_scrollabletabs.beans.City;
 import com.iteso.pdm_scrollabletabs.beans.Store;
 import com.iteso.pdm_scrollabletabs.beans.User;
 import com.iteso.pdm_scrollabletabs.database.DataBaseHandler;
@@ -37,13 +38,38 @@ public class ActivitySplash extends AppCompatActivity {
         Timer timer = new Timer();
         timer.schedule(task, 2000);
 
+        //PRUEBA
         DataBaseHandler dh = DataBaseHandler.getInstance(ActivitySplash.this);
-        Store store1 = new Store();
-        Store store2 = new Store();
-        Store store3 = new Store();
         StoreControl storeControl = new StoreControl();
-        storeControl.getStores(dh);
+        storeControl.deleteStore(1, dh);
         if(storeControl.getStores(dh).isEmpty()){
+            City city = new City();
+            city.setId(2);
+            city.setName("Guadalajara");
+            Store store1 = new Store();
+            store1.setId(0);
+            store1.setName("BestBuy");
+            store1.setPhone("3338564251");
+            store1.setThumbnail(0);
+            store1.setLongitude(-534.51);
+            store1.setLatitude(344.54);
+            store1.setCity(city);
+            Store store2 = new Store();
+            store2.setId(1);
+            store2.setName("Liverpool");
+            store2.setPhone("3375689542");
+            store2.setThumbnail(0);
+            store2.setLongitude(132.51);
+            store2.setLatitude(-451.14);
+            store2.setCity(city);
+            Store store3 = new Store();
+            store3.setId(2);
+            store3.setName("Mac Store");
+            store3.setPhone("3386324571");
+            store3.setThumbnail(0);
+            store3.setLongitude(123.54);
+            store3.setLatitude(163.15);
+            store3.setCity(city);
             storeControl.addStore(store1, dh);
             storeControl.addStore(store2, dh);
             storeControl.addStore(store3, dh);
