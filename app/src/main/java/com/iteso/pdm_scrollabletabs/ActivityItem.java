@@ -65,6 +65,7 @@ public class ActivityItem extends AppCompatActivity {
                 itemProduct.setImage(getResources().getIdentifier(image.getSelectedItem().toString(), "drawable", getPackageName()));
                 itemProduct.setTitle(title.getText().toString());
                 itemProduct.setDescription("Esto es una descripción");
+                itemProductControl.addItemProduct(itemProduct, dh);
 
                 finish();
             }
